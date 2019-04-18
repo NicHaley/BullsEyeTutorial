@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      window.adaSettings = {
+        chatterTokenCallback: function(chatter){ console.log("My chatter:", chatter)},
+        hideMask: true,
+        greeting: "5c59aaabd8269e0339979014",
+        metaFields: {
+          testVal: "yolo",
+          testVal2: "yodo"
+        }
+      };
+    </script>
+    
+    <!-- IE9 will only render if the placed before the closing body tag -->
+    <script 
+      async 
+      id="__ada" 
+      src="/bundle.js"
+      data-handle="ada-example" 
+    ></script>
+    <title>Widget Template</title>
+  </head>
+  <body style="height: 100vh;">
+    <h1>Ada Embed Testing Page</h1>
+    <div id="parent-element" style="height: 500px;"></div>
+    <button onclick="adaEmbed.start({handle: 'ada-example', parentElement: 'parent-element'})">Toggle</button>
+  </body>
+</html>
